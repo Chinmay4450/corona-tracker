@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COVID Tracker</title>
+
+	<link rel="shortcut icon" href="corona.jpeg">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<link rel="stylesheet" type="text/css"
+          href= "{{ url_for('static',filename='styles/chinmaystyle.css') }}" >
+	
+
+</head>
+<body>
+	<h1 class="title">COVID-19 Tracker</h1>
+	<h2 class="subtitle">Coronavirus LIVE Updates District-Wise.</h2>
+	<div class="data-container">
+		<div class="inputparameter">
+			<form >
+				<input type="text" id="nameInput" class="input_field"placeholder="State" >
+				<input type="text" id="emailInput" class="input_field" placeholder="City" >
+				<button type="submit" class ="submitbtn" > Search </button>
+			  </form> 
+		</div>
+		<div class="stats-container">
+			<h4>Cases</h4>
+			<h1 id="totalcases"></h1>
+			<h4>Recovered</h4>
+			<h1 id="recovered"></h1>
+			<h4>Deaths</h4>
+			<h1 id="death"></h1>
+            <h4>Active</h4>
+			<h1 id="active"></h1>
+		</div>
+
+		
+	</div>
+	<h1 class="footer">Created by  Chinmay Gaikwad-Patil </h1>
+
+	<script src="{{ url_for('static',filename='node_modules/jquery/dist/jquery.min.js')}}"></script>
+	<script src="{{ url_for('static',filename='node_modules/popper.js/dist/umd/popper.min.js')}}"></script>
+	<script src="{{ url_for('static',filename='node_modules/lodash/lodash.min.js')}}"></script>
+	<script src="{{ url_for('static',filename='node_modules/g1/dist/g1.min.js')}}"></script>
+	<script src="{{ url_for('static',filename='node_modules/prismjs/prism.js')}}"></script>
+	<script src="{{ url_for('static',filename='js/form.js')}}"></script>
+
+</body>
+</html>
+
